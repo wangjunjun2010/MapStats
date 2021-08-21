@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWnd</class>
+ <widget class="QWidget" name="MainWnd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWnd</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QGroupBox" name="cfgGrp">
+      <property name="title">
+       <string>配置</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="mapFilePathLabel">
+             <property name="text">
+              <string>Map文件：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="mapFormatLabel">
+             <property name="text">
+              <string>Map格式：</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="mapFilePathLineEdit"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="mapFormatComboBox">
+             <item>
+              <property name="text">
+               <string>GreenHills</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HighTec</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tasking</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>S32DS</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MDK</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IAR</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QPushButton" name="selectBtn">
+             <property name="text">
+              <string>选择文件</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="analyseBtn">
+             <property name="text">
+              <string>开始分析</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QListWidget" name="sectionlistWidget"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="resultGrp">
+      <property name="title">
+       <string>分析结果</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="treeTab">
+          <attribute name="title">
+           <string>TreeTab</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QTreeWidget" name="treeWidget">
+             <column>
+              <property name="text">
+               <string notr="true">1</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="barTab">
+          <attribute name="title">
+           <string>BarTab</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
